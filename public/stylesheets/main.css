@@ -448,6 +448,13 @@ template {
 }
 
 body {
+  background: #0052CC;
+  color: #ffffff;
+  font-size: 100%;
   text-align: center;
   padding: 2rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
 }
