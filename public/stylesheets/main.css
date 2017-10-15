@@ -447,14 +447,100 @@ template {
   display: none;
 }
 
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
 body {
-  background: #0052CC;
+  background: #000000;
   color: #ffffff;
+  font-family: 'Lato', serif;
   font-size: 100%;
+  line-height: 1.6;
   text-align: center;
   padding: 2rem;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    padding-top: 4rem;
+  }
+}
+
 h1, h2, h3, h4 {
+  font-family: 'Roboto Slab', serif;
   font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0 0 3rem 0;
+}
+
+.page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2rem 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .page__title {
+    font-size: 3rem;
+  }
+}
+
+.page__sub-title {
+  color: #8fa3b7;
+  margin-bottom: 2rem;
+}
+
+.social {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .social li {
+      margin: 0 0.5rem;
+  }
+}
+
+.social li a {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 40px;
+  opacity: 1;
+  transition: all 0.2s ease;
+  width: 40px;
+}
+
+.social li a:hover {
+  opacity: 0.3;
+}
+
+.social li a.github {
+  background-image: url("/images/social-white-github.svg");
+}
+
+.social li a.twitter {
+  background-image: url("/images/social-white-twitter.svg");
+}
+
+.social li a.linkedin {
+  background-image: url("/images/social-white-linkedin.svg");
 }
