@@ -406,7 +406,10 @@ body {
 p {
   margin: 0 0 1rem 0; }
 
-.container, .header, .contact, .footer {
+img {
+  max-width: 100%; }
+
+.container, .header, .clients__content, .contact, .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -414,7 +417,7 @@ p {
   max-width: 1200px;
   width: 100%; }
   @media only screen and (max-width: 480px) {
-    .container, .header, .contact, .footer {
+    .container, .header, .clients__content, .contact, .footer {
       flex-wrap: wrap; } }
 
 .header {
@@ -524,6 +527,46 @@ p {
     .bio .contact__link a {
       color: #ffffff;
       text-decoration: none; }
+
+.clients {
+  background: #ebebeb;
+  padding: 2rem 1rem; }
+  @media only screen and (min-width: 767px) {
+    .clients {
+      padding: 3rem 0; } }
+  .clients__content {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .clients h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0; }
+    @media only screen and (min-width: 767px) {
+      .clients h3 {
+        margin-bottom: 2rem; } }
+
+.logos {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .logos li {
+    align-items: center;
+    display: flex;
+    flex: 1 1 100px;
+    justify-content: center;
+    margin: 1rem; }
+    @media only screen and (min-width: 767px) {
+      .logos li {
+        flex: 1 1 60px;
+        margin: 0 1rem; } }
+    @media only screen and (max-width: 480px) {
+      .logos li:nth-child(4) {
+        display: none; } }
+  .logos img {
+    filter: grayscale(100%); }
 
 .contact {
   padding: 2rem 1rem; }

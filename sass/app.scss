@@ -20,6 +20,10 @@ p {
   margin: 0 0 1rem 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 %container {
   display: flex;
   flex-direction: row;
@@ -175,6 +179,63 @@ p {
       color: $white;
       text-decoration: none;
     }
+  }
+}
+
+.clients {
+  background: lighten($lightgrey, 10%);
+  padding: 2rem 1rem;
+
+  @include breakpoint($medium) {
+    padding: 3rem 0;
+  }
+
+  &__content {
+    @extend %container;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+
+    @include breakpoint($medium) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.logos {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    align-items: center;
+    display: flex;
+    flex: 1 1 100px;
+    justify-content: center;
+    margin: 1rem;
+
+    @include breakpoint($medium) {
+      flex: 1 1 60px;
+      margin: 0 1rem;
+    }
+
+    &:nth-child(4) {
+      @include breakpoint($small) {
+        display: none;
+      }
+    }
+  }
+
+  img {
+    filter: grayscale(100%);
   }
 }
 
