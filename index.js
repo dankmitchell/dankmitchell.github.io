@@ -6,6 +6,7 @@ var express = require('express'),
     sassMiddleware = require('node-sass-middleware');
 
 var app = express();
+var environment = app.get('env');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -27,6 +28,17 @@ app.use(
     debug: true,
   })
 );
+
+if (environment == 'production') {
+  app.all(/.*/, function(req, res, next) {
+    var host = req.header("host");
+    if (host.match(/^www\..*/i)) {
+      next();
+    } else {
+      res.redirect(301, "https://www." + host + req.url);
+    }
+  });
+}
 
 app.use(express.static(__dirname + '/public'));
 
