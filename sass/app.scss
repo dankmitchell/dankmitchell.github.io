@@ -1,0 +1,271 @@
+@import url('//fonts.googleapis.com/css?family=Nunito:400,600');
+@import 'normalize';
+@import 'mixins';
+
+$primary: #0037fe;
+$white: #ffffff;
+$lightgrey: #d1d1d1;
+$darkgrey: #444444;
+
+body {
+  color: $darkgrey;
+  font-family: 'Nunito', serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+%container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+
+  @include breakpoint($small) {
+    flex-wrap: wrap;
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+.header {
+  @extend %container;
+  padding: 1rem;
+
+  &__links {
+    align-self: center;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+
+    a {
+      color: $primary;
+      position: relative;
+      text-decoration: none;
+      top: -5px;
+
+      &:after {
+        border-bottom: 2px solid $primary;
+        bottom: -5px;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.button {
+  background: $primary;
+  border: none;
+  border-radius: 2rem;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.25;
+  min-width: 200px;
+  padding: 1rem 2.5rem;
+  position: relative;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  -webkit-appearance: none;
+}
+
+.button.white {
+  background: $white;
+  color: $primary;
+}
+
+.page {
+  background: $primary;
+  color: $white;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 2rem 1rem;
+    width: 100%;
+
+    @include breakpoint($medium) {
+      padding: 3rem 0;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 300;
+    left: 50%;
+    line-height: 1.2;
+    margin: 0 0 2rem 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: -5px;
+    transform: translateX(-50%);
+
+    &:after {
+      border-bottom: 2px solid $white;
+      bottom: -5px;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__sub-title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 auto 3rem auto;
+    max-width: 800px;
+    text-align: center;
+  }
+}
+
+.bio {
+  text-align: center;
+
+  @include breakpoint($medium) {
+    text-align: left;
+  }
+
+  &__headshot {
+    display: none;
+
+    @include breakpoint($medium) {
+      display: flex;
+      align-self: end;
+      margin-bottom: -3rem;
+      width: 50%;
+    }
+  }
+
+  .contact__link {
+    color: $lightgrey;
+    font-size: 1rem;
+    margin: 0;
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+.contact {
+  @extend %container;
+  padding: 2rem 1rem;
+
+  @include breakpoint($medium) {
+    padding: 3rem 0;
+  }
+
+  .button {
+    align-self: flex-start;
+  }
+
+  &__link {
+    color: $lightgrey;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 300;
+
+    @include breakpoint($medium) {
+      font-size: 2rem;
+    }
+
+    a {
+      color: $primary;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer {
+  @extend %container;
+  padding: 1rem;
+
+  @include breakpoint($medium) {
+    padding: 2rem 0;
+  }
+}
+
+.copyright {
+  @include breakpoint($medium) {
+    display: flex;
+    order: 1;
+  }
+}
+
+.social {
+  display: flex;
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  text-align: center;
+
+  @include breakpoint($medium) {
+    display: flex;
+    order: 2;
+  }
+
+  li {
+    margin: 0 0.25rem;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 1rem;
+    }
+  }
+
+  a {
+    color: $darkgrey;
+    display: block;
+    opacity: 1;
+    position: relative;
+    text-decoration: none;
+    top: -5px;
+    transition: all 0.2s ease;
+
+    &:after {
+      border-bottom: 2px solid $darkgrey;
+      bottom: -5px;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
