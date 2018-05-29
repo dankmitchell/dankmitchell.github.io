@@ -1,19 +1,18 @@
 {
   "name": "dan-mitchell",
-  "version": "0.2.6",
-  "description": "Portfolio app",
+  "version": "1.0.0",
+  "description": "Portfolio website",
   "engines": {
-    "npm": "5.2.0",
-    "node": "6.11.1"
+    "npm": "6.1.0",
+    "node": "8.11.2"
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "ejs": "2.5.6",
-    "express": "4.15.2",
+    "express": "^4.16.3",
     "express-autoprefixer": "^5.4.0",
     "node-sass": "^4.9.0",
     "node-sass-middleware": "^0.11.0"
@@ -24,12 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danmitchell-/danmitchell"
+    "url": "https://github.com/dankmitchell/danmitchell"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
   "license": "MIT"
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express'),
     sass    = require('node-sass'),
     autoprefixer = require('express-autoprefixer'),
