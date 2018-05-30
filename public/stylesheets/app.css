@@ -397,7 +397,7 @@ template {
 
 body {
   color: #444444;
-  font-family: 'Nunito', serif;
+  font-family: 'Nunito', 'Arial', sans-serif;
   font-size: 100%;
   font-weight: 400;
   line-height: 1.6;
