@@ -37,46 +37,6 @@ img {
   }
 }
 
-.container {
-  @extend %container;
-}
-
-.header {
-  @extend %container;
-  padding: 1rem;
-
-  &__links {
-    align-self: center;
-    list-style-type: none;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      margin-left: 1rem;
-    }
-
-    a {
-      color: $primary;
-      position: relative;
-      text-decoration: none;
-      top: -5px;
-
-      &:after {
-        border-bottom: 2px solid $primary;
-        bottom: -5px;
-        content: '';
-        display: block;
-        left: 0;
-        position: absolute;
-        width: 100%;
-      }
-    }
-  }
-}
-
-.home-link {
-  display: flex;
-}
 
 .button {
   background: $primary;
@@ -101,6 +61,51 @@ img {
 .button.white {
   background: $white;
   color: $primary;
+}
+
+.container {
+  @extend %container;
+}
+
+.header {
+  @extend %container;
+  padding: 1rem;
+
+  &__nav {
+    align-self: center;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  &__home-link {
+    display: flex;
+  }
+}
+
+.nav {
+  margin: 0;
+
+  &__item {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  &__link {
+    color: $primary;
+    position: relative;
+    text-decoration: none;
+    top: -5px;
+
+    &:after {
+      border-bottom: 2px solid $primary;
+      bottom: -5px;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
 }
 
 .page {
@@ -212,7 +217,7 @@ img {
     justify-content: center;
   }
 
-  h3 {
+  &__title {
     font-size: 1.25rem;
     margin: 0 0 1rem 0;
 
@@ -242,11 +247,13 @@ img {
   &__item {
     align-items: center;
     flex: 1 1 100%;
+    flex-basis: 100%;
     justify-content: center;
     padding: 0.5rem 0;
 
     @include breakpoint($medium) {
       flex: 1 1 50%;
+      flex-basis: 50%;
       padding: 1rem;
     }
   }
@@ -266,15 +273,17 @@ img {
   margin: 0;
   padding: 0;
 
-  li {
+  &__item {
     align-items: center;
     display: flex;
     flex: 1 1 100px;
+    flex-basis: 100px;
     justify-content: center;
     margin: 1rem;
 
     @include breakpoint($medium) {
       flex: 1 1 60px;
+      flex-basis: 60px;
       margin: 0 1rem;
     }
 
@@ -303,7 +312,7 @@ img {
   }
 
   &__link {
-    color: $lightgrey;
+    color: $darkgrey;
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: 300;
@@ -348,7 +357,7 @@ img {
     order: 2;
   }
 
-  li {
+  &__item {
     margin: 0 0.25rem;
 
     @media screen and (min-width: 768px) {
@@ -356,7 +365,7 @@ img {
     }
   }
 
-  a {
+  &__link {
     color: $darkgrey;
     display: block;
     opacity: 1;
