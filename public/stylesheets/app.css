@@ -610,7 +610,8 @@ img {
       .logos__item:nth-child(4) {
         display: none; } }
   .logos img {
-    filter: grayscale(100%); }
+    filter: grayscale(100%);
+    width: 95%; }
 
 .contact {
   padding: 2rem 1rem; }
