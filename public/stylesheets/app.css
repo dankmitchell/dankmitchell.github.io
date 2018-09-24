@@ -453,7 +453,8 @@ img {
     display: flex; }
 
 .nav {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
   .nav__item {
     display: inline-block;
     margin-left: 1rem; }
