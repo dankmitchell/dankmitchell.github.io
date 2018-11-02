@@ -1,15 +1,16 @@
-@import url('//fonts.googleapis.com/css?family=Nunito:400,600');
-@import 'normalize';
-@import 'mixins';
+@import url("//fonts.googleapis.com/css?family=Nunito:400,600");
+@import "normalize";
+@import "mixins";
 
 $primary: #0037fe;
 $white: #ffffff;
 $lightgrey: #d1d1d1;
 $darkgrey: #444444;
+$black: #000000;
 
 body {
   color: $darkgrey;
-  font-family: 'Nunito', 'Arial', sans-serif;
+  font-family: "Nunito", "Arial", sans-serif;
   font-size: 100%;
   font-weight: 400;
   line-height: 1.6;
@@ -36,7 +37,6 @@ img {
     flex-wrap: wrap;
   }
 }
-
 
 .button {
   background: $primary;
@@ -68,8 +68,12 @@ img {
 }
 
 .header {
-  @extend %container;
-  padding: 1rem;
+  background: $black;
+
+  &__content {
+    @extend %container;
+    padding: 1rem;
+  }
 
   &__nav {
     align-self: center;
@@ -92,15 +96,15 @@ img {
   }
 
   &__link {
-    color: $primary;
+    color: $white;
     position: relative;
     text-decoration: none;
     top: -5px;
 
     &:after {
-      border-bottom: 2px solid $primary;
+      border-bottom: 2px solid $white;
       bottom: -5px;
-      content: '';
+      content: "";
       display: block;
       left: 0;
       position: absolute;
@@ -110,16 +114,6 @@ img {
 }
 
 .page {
-  .home-page & {
-    background: $primary;
-    color: $white;
-  }
-
-  .work-page & {
-    background: $lightgrey;
-    color: $darkgrey;
-  }
-
   &__content {
     margin: 0 auto;
     max-width: 900px;
@@ -148,7 +142,7 @@ img {
       border-bottom: 2px solid;
       border-bottom-color: inherit;
       bottom: -5px;
-      content: '';
+      content: "";
       display: block;
       left: 0;
       position: absolute;
@@ -188,19 +182,8 @@ img {
     }
   }
 
-  .contact__link {
-    color: $lightgrey;
-    font-size: 1rem;
-    margin: 0;
-
-    &:last-of-type {
-      margin-bottom: 2rem;
-    }
-
-    a {
-      color: $white;
-      text-decoration: none;
-    }
+  .button {
+    margin-top: 1rem;
   }
 }
 
@@ -302,11 +285,15 @@ img {
 }
 
 .contact {
-  @extend %container;
+  background: $black;
   padding: 2rem 1rem;
 
   @include breakpoint($medium) {
     padding: 3rem 0;
+  }
+
+  &__content {
+    @extend %container;
   }
 
   .button {
@@ -314,9 +301,8 @@ img {
   }
 
   &__link {
-    color: $darkgrey;
     font-size: 1.5rem;
-    line-height: 1.2;
+    line-height: 1;
     font-weight: 300;
 
     @include breakpoint($medium) {
@@ -324,7 +310,7 @@ img {
     }
 
     a {
-      color: $primary;
+      color: $white;
       font-weight: 600;
       text-decoration: none;
     }
@@ -332,11 +318,16 @@ img {
 }
 
 .footer {
-  @extend %container;
+  background: $black;
+  color: $white;
   padding: 1rem;
 
   @include breakpoint($medium) {
     padding: 2rem 0;
+  }
+
+  &__content {
+    @extend %container;
   }
 }
 
@@ -368,7 +359,7 @@ img {
   }
 
   &__link {
-    color: $darkgrey;
+    color: $white;
     display: block;
     opacity: 1;
     position: relative;
@@ -377,9 +368,9 @@ img {
     transition: all 0.2s ease;
 
     &:after {
-      border-bottom: 2px solid $darkgrey;
+      border-bottom: 2px solid $white;
       bottom: -5px;
-      content: '';
+      content: "";
       display: block;
       left: 0;
       position: absolute;

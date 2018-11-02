@@ -397,7 +397,7 @@ template {
 
 body {
   color: #444444;
-  font-family: 'Nunito', 'Arial', sans-serif;
+  font-family: "Nunito", "Arial", sans-serif;
   font-size: 100%;
   font-weight: 400;
   line-height: 1.6;
@@ -409,7 +409,7 @@ p {
 img {
   max-width: 100%; }
 
-.container, .header, .clients__content, .work, .contact, .footer {
+.container, .header__content, .clients__content, .work, .contact__content, .footer__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -417,7 +417,7 @@ img {
   max-width: 1200px;
   width: 100%; }
   @media only screen and (max-width: 480px) {
-    .container, .header, .clients__content, .work, .contact, .footer {
+    .container, .header__content, .clients__content, .work, .contact__content, .footer__content {
       flex-wrap: wrap; } }
 
 .button {
@@ -444,7 +444,9 @@ img {
   color: #0037fe; }
 
 .header {
-  padding: 1rem; }
+  background: #000000; }
+  .header__content {
+    padding: 1rem; }
   .header__nav {
     align-self: center;
     list-style-type: none;
@@ -459,26 +461,18 @@ img {
     display: inline-block;
     margin-left: 1rem; }
   .nav__link {
-    color: #0037fe;
+    color: #ffffff;
     position: relative;
     text-decoration: none;
     top: -5px; }
     .nav__link:after {
-      border-bottom: 2px solid #0037fe;
+      border-bottom: 2px solid #ffffff;
       bottom: -5px;
-      content: '';
+      content: "";
       display: block;
       left: 0;
       position: absolute;
       width: 100%; }
-
-.home-page .page {
-  background: #0037fe;
-  color: #ffffff; }
-
-.work-page .page {
-  background: #d1d1d1;
-  color: #444444; }
 
 .page__content {
   margin: 0 auto;
@@ -505,7 +499,7 @@ img {
     border-bottom: 2px solid;
     border-bottom-color: inherit;
     bottom: -5px;
-    content: '';
+    content: "";
     display: block;
     left: 0;
     position: absolute;
@@ -534,15 +528,8 @@ img {
         align-self: end;
         margin-bottom: -3rem;
         width: 50%; } }
-  .bio .contact__link {
-    color: #d1d1d1;
-    font-size: 1rem;
-    margin: 0; }
-    .bio .contact__link:last-of-type {
-      margin-bottom: 2rem; }
-    .bio .contact__link a {
-      color: #ffffff;
-      text-decoration: none; }
+  .bio .button {
+    margin-top: 1rem; }
 
 .clients {
   background: #ebebeb;
@@ -615,6 +602,7 @@ img {
     width: 95%; }
 
 .contact {
+  background: #000000;
   padding: 2rem 1rem; }
   @media only screen and (min-width: 767px) {
     .contact {
@@ -622,19 +610,20 @@ img {
   .contact .button {
     align-self: flex-start; }
   .contact__link {
-    color: #444444;
     font-size: 1.5rem;
-    line-height: 1.2;
+    line-height: 1;
     font-weight: 300; }
     @media only screen and (min-width: 767px) {
       .contact__link {
         font-size: 2rem; } }
     .contact__link a {
-      color: #0037fe;
+      color: #ffffff;
       font-weight: 600;
       text-decoration: none; }
 
 .footer {
+  background: #000000;
+  color: #ffffff;
   padding: 1rem; }
   @media only screen and (min-width: 767px) {
     .footer {
@@ -661,7 +650,7 @@ img {
       .social__item {
         margin: 0 1rem; } }
   .social__link {
-    color: #444444;
+    color: #ffffff;
     display: block;
     opacity: 1;
     position: relative;
@@ -669,9 +658,9 @@ img {
     top: -5px;
     transition: all 0.2s ease; }
     .social__link:after {
-      border-bottom: 2px solid #444444;
+      border-bottom: 2px solid #ffffff;
       bottom: -5px;
-      content: '';
+      content: "";
       display: block;
       left: 0;
       position: absolute;
