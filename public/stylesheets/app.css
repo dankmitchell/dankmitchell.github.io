@@ -481,7 +481,7 @@ img {
   width: 100%; }
   @media only screen and (min-width: 767px) {
     .page__content {
-      padding: 3rem 0; } }
+      padding: 3rem 0 5rem; } }
 
 .page__title {
   display: inline-block;
@@ -526,7 +526,8 @@ img {
       .bio__headshot {
         display: flex;
         align-self: end;
-        margin-bottom: -3rem;
+        margin-bottom: -5rem;
+        margin-top: -2rem;
         width: 50%; } }
   .bio .button {
     margin-top: 1rem; }
@@ -540,12 +541,6 @@ img {
   .clients__content {
     flex-wrap: wrap;
     justify-content: center; }
-  .clients__title {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0; }
-    @media only screen and (min-width: 767px) {
-      .clients__title {
-        margin-bottom: 2rem; } }
 
 .work {
   padding: 0 1rem 2rem 1rem; }

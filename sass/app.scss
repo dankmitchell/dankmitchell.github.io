@@ -121,7 +121,7 @@ img {
     width: 100%;
 
     @include breakpoint($medium) {
-      padding: 3rem 0;
+      padding: 3rem 0 5rem;
     }
   }
 
@@ -177,7 +177,8 @@ img {
     @include breakpoint($medium) {
       display: flex;
       align-self: end;
-      margin-bottom: -3rem;
+      margin-bottom: -5rem;
+      margin-top: -2rem;
       width: 50%;
     }
   }
@@ -199,15 +200,6 @@ img {
     @extend %container;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  &__title {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-
-    @include breakpoint($medium) {
-      margin-bottom: 2rem;
-    }
   }
 }
 
