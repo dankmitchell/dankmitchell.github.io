@@ -14,11 +14,11 @@
     "ejs": "2.5.6",
     "express": "^4.16.3",
     "express-autoprefixer": "^5.4.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.4",
     "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
-    "request": "^2.81.0",
+    "request": "^2.88.0",
     "tape": "^4.7.0"
   },
   "repository": {
