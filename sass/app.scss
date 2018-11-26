@@ -83,6 +83,13 @@ img {
 
   &__home-link {
     display: flex;
+
+    &-text {
+      display: block;
+      height: 0;
+      text-indent: -9999px;
+      width: 0;
+    }
   }
 }
 

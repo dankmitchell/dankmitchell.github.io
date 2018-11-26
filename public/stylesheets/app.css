@@ -453,6 +453,11 @@ img {
     margin: 0; }
   .header__home-link {
     display: flex; }
+    .header__home-link-text {
+      display: block;
+      height: 0;
+      text-indent: -9999px;
+      width: 0; }
 
 .nav {
   margin: 0;
