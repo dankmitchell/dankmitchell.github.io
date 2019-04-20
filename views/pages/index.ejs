@@ -1,64 +1,57 @@
-<!DOCTYPE html>
-<html lang='en'>
+<%- contentFor('body_classes') %>
+home-page
 
-<head>
-  <% include ../partials/head.ejs %>
-</head>
+<%- contentFor('page_title') %>
+Freelance Web Developer in Essex | Dan Mitchell
 
-<body class='home-page'>
-  <% include ../partials/header.ejs %>
-  <main role='main'>
-    <div class='page'>
-      <div class='page__content'>
-        <h1 class='page__title'>About me</h1>
-        <h2 class='page__sub-title'>Freelance developer with expertise in delivery management and customer service</h3>
-          <div class='container'>
-            <div class='bio'>
-              <p>I’m an extremely hard working and a passionate individual, I strive for the best and don't give up
-                until I have achieved my goals.</p>
-              <p>I have an extensive background in customer service, team leadership and business development;
-                combining this with my technical abilities makes me an asset to any business.</p>
-              <p>My technical skills include Ruby on Rails, HTML(5), CSS(3), JavaScript, NodeJS and Responsive Web
-                Design(Mobile first).</p>
-              <p>I’m proficient in Photoshop, Illustrator and Sketch.</p>
-              <a href='mailto:dan@danmitchell.co.uk' class='button'>Hire me</a>
-            </div>
-            <img src='images/dan.png' alt='Headshot of Dan Mitchell, Frontend developer' class='bio__headshot'></a>
-          </div>
+<%- contentFor('page_description') %>
+Freelance Developer based in Essex. Specialising in all client side technologies and Ruby on Rails
+
+<%- contentFor('body') %>
+<div class='page'>
+  <div class='page__content'>
+    <h1 class='page__title'>About me</h1>
+    <h2 class='page__sub-title'>Freelance developer with expertise in delivery management and customer service</h3>
+      <div class='container'>
+        <div class='bio'>
+          <p>I’m an extremely hard working and a passionate individual, I strive for the best and don't give up
+            until I have achieved my goals.</p>
+          <p>I have an extensive background in customer service, team leadership and business development;
+            combining this with my technical abilities makes me an asset to any business.</p>
+          <p>My technical skills include Ruby on Rails, HTML(5), CSS(3), JavaScript, NodeJS and Responsive Web
+            Design(Mobile first).</p>
+          <p>I’m proficient in Photoshop, Illustrator and Sketch.</p>
+          <a href='mailto:dan@danmitchell.co.uk' class='button'>Hire me</a>
+        </div>
+        <img src='images/dan.png' alt='Headshot of Dan Mitchell, Frontend developer' class='bio__headshot'></a>
       </div>
-    </div>
+  </div>
+</div>
 
-    <div class='clients'>
-      <div class='clients__content'>
-        <ul class="logos">
-          <li class='logos__item'>
-            <img src='images/barclays.svg' alt='Barclays logo' />
-          </li>
-          <li class='logos__item'>
-            <img src='images/tui-group.svg' alt='TUI Group logo' />
-          </li>
-          <li class='logos__item'>
-            <img src='images/mclaren.svg' alt='McLaren logo' />
-          </li>
-          <li class='logos__item'>
-            <img src='images/department-for-education.svg' alt='Department for Education' />
-          </li>
-          <li class='logos__item'>
-            <img src='images/cabinet-office.svg' alt='Cabinet Office logo' />
-          </li>
-          <li class='logos__item'>
-            <img src='images/the-telegraph.svg' alt='Telegraph logo' />
-          </li>
-          <li class='logos__item'>
-            <img src='images/pearson.svg' alt='Pearson logo' />
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <% include ../partials/contact.ejs %>
-  </main>
-  <% include ../partials/footer.ejs %>
-</body>
-
-</html>
+<div class='clients'>
+  <div class='clients__content'>
+    <ul class="logos">
+      <li class='logos__item'>
+        <img src='images/barclays.svg' alt='Barclays logo' />
+      </li>
+      <li class='logos__item'>
+        <img src='images/tui-group.svg' alt='TUI Group logo' />
+      </li>
+      <li class='logos__item'>
+        <img src='images/mclaren.svg' alt='McLaren logo' />
+      </li>
+      <li class='logos__item'>
+        <img src='images/department-for-education.svg' alt='Department for Education' />
+      </li>
+      <li class='logos__item'>
+        <img src='images/cabinet-office.svg' alt='Cabinet Office logo' />
+      </li>
+      <li class='logos__item'>
+        <img src='images/the-telegraph.svg' alt='Telegraph logo' />
+      </li>
+      <li class='logos__item'>
+        <img src='images/pearson.svg' alt='Pearson logo' />
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,8 +1,9 @@
 'use strict';
 
-var express = require('express'),
-    sass    = require('node-sass'),
-    autoprefixer = require('express-autoprefixer'),
+var express        = require('express'),
+    expressLayouts = require('express-ejs-layouts'),
+    sass           = require('node-sass'),
+    autoprefixer   = require('express-autoprefixer'),
     sassMiddleware = require('node-sass-middleware');
 
 var app = express();
@@ -12,6 +13,8 @@ app.set('port', (process.env.PORT || 5000));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+
+app.use(expressLayouts);
 
 app.use(
   autoprefixer({
