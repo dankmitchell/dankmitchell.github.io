@@ -53,6 +53,18 @@ app.get('/work', function(request, response) {
   response.render('pages/work');
 });
 
+app.get('/ruby-on-rails', function(request, response) {
+  response.render('pages/ruby_on_rails');
+});
+
+app.get('/software-development', function(request, response) {
+  response.render('pages/software_development');
+});
+
+app.get('/web-development', function(request, response) {
+  response.render('pages/web_development');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
