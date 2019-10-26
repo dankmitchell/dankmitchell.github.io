@@ -1,1 +1,2 @@
 User-Agent: *
+Sitemap: https://www.danmitchell.co.uk/sitemap.xml
