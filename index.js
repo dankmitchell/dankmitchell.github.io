@@ -49,6 +49,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/my-story', function(request, response) {
+  response.render('pages/my_story');
+});
+
 app.get('/work', function(request, response) {
   response.render('pages/work');
 });
