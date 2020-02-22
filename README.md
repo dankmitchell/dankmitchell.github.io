@@ -1,6 +1,6 @@
 # Dan Mitchell
 
-#### Full Stack(Ruby on Rails) Consultant
+#### Agile Delivery Manager, former software developer and retail manager
 
 Portfolio and a bit about me :)
 
