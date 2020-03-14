@@ -10,7 +10,7 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
                     (min-resolution: 1.5dppx)';
 
 @mixin breakpoint($media) {
-    @media only screen and #{$media} {
-        @content;
-    }
+  @media only screen and #{$media} {
+    @content;
+  }
 }

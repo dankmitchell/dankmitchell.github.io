@@ -451,6 +451,9 @@ img {
     align-self: center;
     list-style-type: none;
     margin: 0; }
+    @media only screen and (max-width: 480px) {
+      .header__nav {
+        margin-top: 1rem; } }
   .header__home-link {
     display: flex; }
     .header__home-link-text {
@@ -464,7 +467,9 @@ img {
   padding: 0; }
   .nav__item {
     display: inline-block;
-    margin-left: 1rem; }
+    margin-right: 1rem; }
+    .nav__item:last-child {
+      margin-right: 0; }
   .nav__link {
     color: #ffffff;
     position: relative;
@@ -514,9 +519,12 @@ img {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.2;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 2rem auto;
   max-width: 800px;
   text-align: center; }
+  @media only screen and (min-width: 767px) {
+    .page__sub-title {
+      margin-bottom: 3rem; } }
   .work-page .page__sub-title {
     margin-bottom: 0; }
 
@@ -532,8 +540,11 @@ img {
         display: flex;
         align-self: end;
         margin-bottom: -5rem;
-        margin-top: 0rem;
+        margin-top: 0;
         width: 50%; } }
+    @media only screen and (min-width: 767px) {
+      .bio__headshot--mobile {
+        display: none; } }
   .bio .button {
     margin-top: 1rem; }
 

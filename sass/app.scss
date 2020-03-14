@@ -79,6 +79,10 @@ img {
     align-self: center;
     list-style-type: none;
     margin: 0;
+
+    @include breakpoint($small) {
+      margin-top: 1rem;
+    }
   }
 
   &__home-link {
@@ -99,7 +103,11 @@ img {
 
   &__item {
     display: inline-block;
-    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -161,9 +169,13 @@ img {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2rem auto;
     max-width: 800px;
     text-align: center;
+
+    @include breakpoint($medium) {
+      margin-bottom: 3rem;
+    }
 
     .work-page & {
       margin-bottom: 0;
@@ -187,6 +199,12 @@ img {
       margin-bottom: -5rem;
       margin-top: 0;
       width: 50%;
+    }
+
+    &--mobile {
+      @include breakpoint($medium) {
+        display: none;
+      }
     }
   }
 
