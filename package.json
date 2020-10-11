@@ -4,7 +4,7 @@
   "description": "Portfolio website",
   "engines": {
     "npm": "6.1.0",
-    "node": "8.11.2"
+    "node": "12.18.3"
   },
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "express": "^4.16.3",
     "express-autoprefixer": "^5.4.0",
     "express-ejs-layouts": "^2.5.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
